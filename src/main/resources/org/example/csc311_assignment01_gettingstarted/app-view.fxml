@@ -2,15 +2,23 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
 
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="org.example.csc311_assignment01_gettingstarted.AppController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<GridPane xmlns:fx="http://javafx.com/fxml"
+          fx:controller="org.example.csc311_assignment01_gettingstarted.AppController"
+          alignment="center" hgap="10" vgap="10">
+    <Label text="First number to add: " GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <TextField fx:id="numText1" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onCalculateButtonClick"/>
-</VBox>
+    <Label text="Second number to add: " GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <TextField fx:id="numText2" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+    <!-- ToDo 02: Calc button -->
+    <Button text="Calculate Sum" fx:id="calculateButton" onAction="#onCalculateButtonClick" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+    <!-- ToDo 02: Display sum-->
+    <Label fx:id="resultLabel" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+</GridPane>
